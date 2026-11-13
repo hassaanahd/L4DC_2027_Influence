@@ -1,0 +1,31 @@
+flowchart LR
+  subgraph GEN["01_generate_data  (simulator, model 1-2)"]
+    G1["build community<br/>random W, heterogeneous farms"] --> G2["simulate day by day"]
+  end
+  G2 --> M[("measurements/<br/>excitations M_d, event days Pi_d,<br/>outputs Y_o, masks,<br/>shared series Omega")]
+  G1 --> S[("sketch/<br/>zero patterns only")]
+  G1 --> TR[("truth/<br/>W, P, full matrices")]
+  subgraph CERT["02_certify_links  (blind)"]
+    C1["lags from the sketch<br/>[Def 1, Lemma 1]"] --> C2["Step 1: residuals<br/>[eq. 4, C2]"] --> C3["Steps 2-3: statistic Z<br/>[eq. 5]"] --> C4["threshold, decisions,<br/>p-values  [Thm 2, eq. 6]"]
+    C5["lag scan, no sketch<br/>[Prop 3]"]
+  end
+  subgraph DES["03_what_to_measure  (blind)"]
+    D1["pilot: every candidate channel"] --> D2["channel certificates<br/>[Cor 4]"] --> D3["predict each plan<br/>from the pilot [eq. 7]"] --> D4["choose the plan<br/>[Procedure]"]
+  end
+  M --> C2
+  S --> C1
+  M --> C5
+  M --> D1
+  C4 --> RES[("results/")]
+  C5 --> RES
+  D4 --> RES
+  subgraph SC["04_score_and_compare  (the only notebook that opens truth/)"]
+    E1["false links, recall,<br/>precision, F1"] --- E2["DMDc, Granger-type tests,<br/>Lasso, on the same data"] --- E3["predicted vs observed<br/>power [eq. 7]"]
+  end
+  RES --> SC
+  TR --> SC
+  M --> E2
+  classDef store fill:#f4f4f2,stroke:#888;
+  classDef truth fill:#fbefed,stroke:#a33a2b;
+  class M,S,RES store;
+  class TR truth;

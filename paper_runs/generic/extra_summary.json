@@ -1,0 +1,151 @@
+{
+ "lag": [
+  {
+   "T": 2000,
+   "test": "tau0-1",
+   "FWER": 0.0,
+   "false_per_net": 0.0,
+   "false_twohop": 0.0,
+   "power": 0.0
+  },
+  {
+   "T": 2000,
+   "test": "tau0 (true)",
+   "FWER": 0.0,
+   "false_per_net": 0.0,
+   "false_twohop": 0.0,
+   "power": 0.8328542558589709
+  },
+  {
+   "T": 2000,
+   "test": "tau0+1",
+   "FWER": 0.475,
+   "false_per_net": 0.65,
+   "false_twohop": 0.65,
+   "power": 0.0
+  },
+  {
+   "T": 2000,
+   "test": "single_true",
+   "FWER": 0.0,
+   "false_per_net": 0.0,
+   "false_twohop": 0.0,
+   "power": 0.689787957049957
+  },
+  {
+   "T": 2000,
+   "test": "seq",
+   "FWER": 0.0,
+   "false_per_net": 0.0,
+   "false_twohop": 0.0,
+   "power": 0.6317477345936658
+  },
+  {
+   "T": 2000,
+   "test": "seq lag found",
+   "lags": {
+    "None": 0,
+    "1": 0,
+    "2": 40,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   }
+  },
+  {
+   "T": 4000,
+   "test": "tau0-1",
+   "FWER": 0.0,
+   "false_per_net": 0.0,
+   "false_twohop": 0.0,
+   "power": 0.0
+  },
+  {
+   "T": 4000,
+   "test": "tau0 (true)",
+   "FWER": 0.0,
+   "false_per_net": 0.0,
+   "false_twohop": 0.0,
+   "power": 0.9871004349053998
+  },
+  {
+   "T": 4000,
+   "test": "tau0+1",
+   "FWER": 1.0,
+   "false_per_net": 5.625,
+   "false_twohop": 5.625,
+   "power": 0.008090024875943761
+  },
+  {
+   "T": 4000,
+   "test": "single_true",
+   "FWER": 0.0,
+   "false_per_net": 0.0,
+   "false_twohop": 0.0,
+   "power": 0.9476755665131691
+  },
+  {
+   "T": 4000,
+   "test": "seq",
+   "FWER": 0.0,
+   "false_per_net": 0.0,
+   "false_twohop": 0.0,
+   "power": 0.9286596533624097
+  },
+  {
+   "T": 4000,
+   "test": "seq lag found",
+   "lags": {
+    "None": 0,
+    "1": 0,
+    "2": 40,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   }
+  }
+ ],
+ "lasso": [
+  {
+   "case": "main",
+   "T": 2000,
+   "runs": 40,
+   "FWER": 1.0,
+   "false_per_net": 146.875,
+   "power": 0.9974952095991408,
+   "precision": 0.2546239146708514,
+   "false_twohop": 39.2
+  },
+  {
+   "case": "main",
+   "T": 4000,
+   "runs": 40,
+   "FWER": 1.0,
+   "false_per_net": 163.8,
+   "power": 0.9994565217391305,
+   "precision": 0.23531450249043945,
+   "false_twohop": 44.175
+  },
+  {
+   "case": "ring",
+   "T": 4000,
+   "runs": 15,
+   "FWER": 1.0,
+   "false_per_net": 709.3333333333334,
+   "power": 0.9287500000000001,
+   "precision": 0.17342679938017133,
+   "false_twohop": 232.53333333333333,
+   "false_near": 138.66666666666666
+  },
+  {
+   "case": "ifac",
+   "T": 4000,
+   "runs": 30,
+   "FWER": 1.0,
+   "false_per_net": 305.6333333333333,
+   "power": 0.9808357013843293,
+   "precision": 0.1380914470592159,
+   "false_twohop": 89.73333333333333
+  }
+ ]
+}
