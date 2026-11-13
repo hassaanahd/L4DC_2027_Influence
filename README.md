@@ -1,4 +1,4 @@
-# Learning Influence Networks from Agent-Specific Excitations: Finite-Sample Guarantees and Measurement Design
+# Learning Influence with Finite-Sample Guarantees in Socio-hydrological Networks from Farmer-Specific Excitations
 
 Code for the paper by Hassaan Ahmed and Abubakr Muhammad (LUMS), submitted to L4DC 2027.
 
